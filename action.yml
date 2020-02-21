@@ -1,0 +1,11 @@
+name: 'XML Lint'
+description: 'Lint XML files with xmllint'
+inputs:
+    test-file:
+        description: 'Bash file with lint command'
+        required: true
+runs:
+    using: 'docker'
+    image: 'Dockerfile'
+    args:
+        - ${{ inputs.test-file }}
